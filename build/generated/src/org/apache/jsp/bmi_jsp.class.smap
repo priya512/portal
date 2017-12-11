@@ -1,0 +1,14 @@
+SMAP
+bmi_jsp.java
+JSP
+*S JSP
+*F
++ 0 bmi.jsp
+bmi.jsp
++ 1 header.jsp
+header.jsp
+*L
+1:49,2
+5#1,215:51
+2#0,44:265
+*E
