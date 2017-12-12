@@ -241,7 +241,22 @@ body {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+          var frames = Array(
+    'http://www.yahoo.com/', 1
+    'http://www.ask.com/', 1,
+    'http://www.dogpile.com/');
+var i = 0, len = frames.length;
+function ChangeSrc()
+{
+  document.getElementById('frame').src = frames[i++];
+  if (i >= len) return; // no more changing
+  setTimeout('ChangeSrc()', (frames[i++]*1000));
+}
+    window.onload = ChangeSrc;
 
+    </script>
+<script>
+  
 	$(document).ready(function(){
 
 		var showHeaderAt = 150;
@@ -327,9 +342,12 @@ function showSlides() {
     <h2>Know your BMR</h2>
     <form action="bmr.jsp"> <input type="submit" value="Click Me!"/>
     </form>
+    <iframe src="" name="frame" id="frame" height="100%"> </iframe>
 
 
-<iframe width="420" height="315" align='right'
+    
+
+    <iframe width="420" height="315" align='right'
 src="https://www.youtube.com/embed/xtPKQPYJ8rQ?autoplay=0">
 </iframe></div>
 
